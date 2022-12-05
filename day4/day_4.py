@@ -1,14 +1,13 @@
 from pathlib import Path
-from typing import Tuple
 
 
-def closed_interval_intersection(a: Tuple[int, int], b: Tuple[int, int]) -> int:
+def closed_interval_intersection(a: tuple[int, int], b: tuple[int, int]) -> int:
     if b[0] < a[0]:
         a, b = b, a
     return max(min(a[1], b[1]) - max(a[0], b[0]) + 1, 0)
 
 
-def len_closed_interval(a: Tuple[int, int]) -> int:
+def len_closed_interval(a: tuple[int, int]) -> int:
     return a[1] - a[0] + 1
 
 
